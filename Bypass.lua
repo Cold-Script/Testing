@@ -88,33 +88,33 @@ lib.KeybindFrame.Visible = true
 
 local flags = {
     speed = true,
-    speedbypass = false,
+    speedbypass = true,
     noclip = false,
-    ncpbypass = false,
-    clipPrompts = false,
+    ncpbypass = true,
+    clipPrompts = true,
     auraPrompts = false,
-    reachPrompts = false,
+    reachPrompts = true,
     fly = false,
-    esp = false,
-    espRainbow = false,
-    tracers = false,
-    fov = false,
-    fb = false,
-    betterEnvironment = false,
-    padLock = false,
-    thirdperson = false,
-    doorreach = false,
+    esp = true,
+    espRainbow = true,
+    tracers = true,
+    fov = true,
+    fb = true,
+    betterEnvironment = true,
+    padLock = true,
+    thirdperson = _G.Thirdp,
+    doorreach = true,
     voiddisabler = true
 }
 
 local AntiEntity = {
     Screech =  true,
     Figure = true,
-    Seek = false,
+    Seek = true,
     A90 = true,
     Snare = true,
-    Eyes = false,
-    Obstruction = false
+    Eyes = true,
+    Obstruction = true
 }
 
 local OldScreechModule = remoteListener.Modules.Screech
@@ -472,7 +472,7 @@ group.left:AddToggle('cv1', {
 
 group.left:AddSlider('cv2', {
     Text = 'Studs',
-    Default = 30,
+    Default = 50,
     Min = 0,
     Max = 50,
     Rounding = 1,
@@ -485,7 +485,7 @@ group.left:AddSlider('cv2', {
 group.left:AddDropdown('cv3', {
     Values = {'Boost', 'Walkspeed', 'CFrameWalk'},
     Text = 'Speed method',
-    Default = 'Boost',
+    Default = 'Walkspeed',
     Multi = false,
     Tooltip = 'what method to use for speed',
     Callback = function(v)
@@ -703,13 +703,6 @@ group.esp:AddLabel('Item color'):AddColorPicker('cv9', {
     end
 })
 
-group.esp:AddLabel('Asset color'):AddColorPicker('cv10', {
-    Title = 'Asset color',
-    Default = espColors[2],
-    Callback = function(v)
-        espColors[2] = v
-    end
-})
 
                             
 group.esp:AddLabel('Entity color'):AddColorPicker('cv11', {
