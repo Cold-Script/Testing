@@ -123,7 +123,7 @@ local OldA90Module = remoteListener.Modules.A90
 local values = {
     speedV = 30,
     fieldOfView = 120,
-    speedbypassDelay = 0
+    speedbypassDelay = 0.15
 }
 
 local speedMethod = 'Boost'
