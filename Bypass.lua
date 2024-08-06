@@ -73,7 +73,8 @@ local save =  loadstring(game:HttpGet(rep.. 'addons/SaveManager.lua'))()
 local theme = loadstring(game:HttpGet(rep.. 'addons/ThemeManager.lua'))()
 
 local Options = getgenv().Options
-
+lib:Notify("Press V to Third person")
+lib:Notify("Press N to Noclip")
 local window = lib:CreateWindow({
     Title = 'YOU HUB | ' .. player.Name,
     Center = true,
@@ -88,7 +89,7 @@ lib.KeybindFrame.Visible = true
 
 local flags = {
     speed = true,
-    speedbypass = true,
+    speedbypass = false,
     noclip = false,
     ncpbypass = false,
     clipPrompts = false,
@@ -351,7 +352,7 @@ group.entity:AddToggle('Screech', {
 
 group.entity:AddToggle('Eyes', {
     Text = 'Anti-Eyes',
-    Default = false,
+    Default = true,
     Tooltip = 'Eyes no more',
 
     Callback = function(v)
@@ -361,7 +362,7 @@ group.entity:AddToggle('Eyes', {
 
 group.entity:AddToggle('A90', {
     Text = 'Anti-A90',
-    Default = false,
+    Default = true,
     Tooltip = 'A90 no more',
 
     Callback = function(v)
@@ -371,7 +372,7 @@ group.entity:AddToggle('A90', {
 
 group.entity:AddToggle('Obstruction', {
     Text = 'Anti-Obstruction',
-    Default = false,
+    Default = true,
     Tooltip = 'Obstruction no more',
 
     Callback = function(v)
@@ -381,7 +382,7 @@ group.entity:AddToggle('Obstruction', {
 
 group.entity:AddToggle('Seek', {
     Text = 'Anti-Seek',
-    Default = false,
+    Default = true,
     Tooltip = 'Seek no more',
 
     Callback = function(v)
