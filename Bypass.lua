@@ -95,9 +95,9 @@ local flags = {
     auraPrompts = false,
     reachPrompts = true,
     fly = false,
-    esp = true,
-    espRainbow = true,
-    tracers = true,
+    esp = false,
+    espRainbow = false,
+    tracers = false,
     fov = true,
     fb = true,
     betterEnvironment = true,
@@ -123,7 +123,7 @@ local OldA90Module = remoteListener.Modules.A90
 local values = {
     speedV = 30,
     fieldOfView = 120,
-    speedbypassDelay = .2
+    speedbypassDelay = 0
 }
 
 local speedMethod = 'Boost'
