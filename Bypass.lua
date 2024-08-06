@@ -79,7 +79,7 @@ local window = lib:CreateWindow({
     Center = true,
     AutoShow = true,
     TabPadding = 8,
-    MenuFadeTime = 0.2
+    MenuFadeTime = 0
 })
 
 -- settings up stuff
@@ -123,7 +123,7 @@ local OldA90Module = remoteListener.Modules.A90
 local values = {
     speedV = 30,
     fieldOfView = 120,
-    speedbypassDelay = 0.15
+    speedbypassDelay = 0
 }
 
 local speedMethod = 'Boost'
@@ -485,7 +485,7 @@ group.left:AddSlider('cv2', {
 group.left:AddDropdown('cv3', {
     Values = {'Boost', 'Walkspeed', 'CFrameWalk'},
     Text = 'Speed method',
-    Default = 'Walkspeed',
+    Default = 'Boost',
     Multi = false,
     Tooltip = 'what method to use for speed',
     Callback = function(v)
