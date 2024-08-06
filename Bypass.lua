@@ -73,8 +73,7 @@ local save =  loadstring(game:HttpGet(rep.. 'addons/SaveManager.lua'))()
 local theme = loadstring(game:HttpGet(rep.. 'addons/ThemeManager.lua'))()
 
 local Options = getgenv().Options
-lib:Notify("Press V to Third person")
-lib:Notify("Press N to Noclip")
+
 local window = lib:CreateWindow({
     Title = 'YOU HUB | ' .. player.Name,
     Center = true,
