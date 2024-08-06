@@ -6,7 +6,11 @@
     todo:
     ignore this
 ]]
-
+if _G.Ex then
+    print("pls checking script not only muti")
+    return
+end
+_G.Ex = true
 warn'hello'
 repeat task.wait() until game:IsLoaded()
 warn'hola'
@@ -123,7 +127,7 @@ local OldA90Module = remoteListener.Modules.A90
 local values = {
     speedV = 30,
     fieldOfView = 120,
-    speedbypassDelay = 0
+    speedbypassDelay = 0.45
 }
 
 local speedMethod = 'Boost'
